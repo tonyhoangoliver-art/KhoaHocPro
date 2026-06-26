@@ -60,6 +60,12 @@ function getSheet(name) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sheet = ss.getSheetByName(name);
   if (!sheet) sheet = ss.insertSheet(name);
+  const headers = name === 'Users'
+    ? ['id', 'name', 'email', 'password', 'role', 'createdAt', 'token']
+    : ['id', 'title', 'image', 'date', 'time', 'desc', 'isLive', 'createdAt'];
+  if (sheet.getLastRow() === 0 || !sheet.getRange(1, 1).getValue()) {
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+  }
   return sheet;
 }
 
