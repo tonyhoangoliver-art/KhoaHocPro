@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unica - Học Viện Đào Tạo Online</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="#" class="logo">
+          <span class="logo-icon">U</span>
+          <span class="logo-text">unica</span>
+        </a>
+        <div class="search-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
+          </svg>
+          <input type="text" placeholder="Tìm khóa học, giảng viên">
+        </div>
+      </div>
+      <div class="header-right">
+        <nav class="nav-links">
+          <a href="#" class="nav-link">Doanh nghiệp</a>
+          <a href="#" class="nav-link">Hội viên</a>
+        </nav>
+        <div id="authArea">
+          <button class="signin-btn" onclick="openAuthModal('login')">Đăng nhập</button>
+        </div>
+        <div id="userArea" class="hidden">
+          <span id="userName" class="user-name"></span>
+          <button class="logout-btn" onclick="logout()">Đăng xuất</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-carousel" id="heroCarousel">
+        <div class="hero-slide" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">KIẾM TIỀN THỤ ĐỘNG</h1>
+              <h2 class="hero-subtitle">AFFILIATE</h2>
+              <div class="hero-brands">
+                <span class="brand-btn shopee">SHOPEE</span>
+                <span class="brand-btn facebook">FACEBOOK</span>
+              </div>
+              <button class="hero-cta">ĐĂNG KÝ NGAY ▶</button>
+            </div>
+            <div class="hero-image">
+              <div class="laptop-mockup">
+                <div class="laptop-screen">
+                  <div class="screen-content"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section">
+      <div class="container">
+        <div class="categories-grid">
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #ff6b6b;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7V17L12 22L22 17V7L12 2Z"/></svg>
+            </div>
+            <span>Kính học</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #ffd93d;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <span>Mỹ viện</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #6bcb77;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><rect x="4" y="4" width="16" height="16"/></svg>
+            </div>
+            <span>Affiliate</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #4d96ff;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7V17L12 22L22 17V7L12 2Z"/></svg>
+            </div>
+            <span>Market</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #ff922b;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7L12 12L22 7L12 2Z"/></svg>
+            </div>
+            <span>Seller</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #748ffc;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><rect x="2" y="4" width="20" height="16"/></svg>
+            </div>
+            <span>LMS</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #f06595;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <span>Webinar</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #ffd43b;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></svg>
+            </div>
+            <span>Thư viện</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #20c997;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z"/></svg>
+            </div>
+            <span>Community</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #ff6b9d;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M21 6H3C1.9 6 1 6.9 1 8V16C1 17.1 1.9 18 3 18H21C22.1 18 23 17.1 23 16V8C23 6.9 22.1 6 21 6ZM21 16H3V8H21V16ZM6 10H8V14H6V10ZM10 10H12V14H10V10ZM14 10H16V14H14V10Z"/></svg>
+            </div>
+            <span>Game</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #ffa94d;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 12H4V22H20V12H22L12 2Z"/></svg>
+            </div>
+            <span>EduTop</span>
+          </a>
+          <a href="#" class="category-item">
+            <div class="category-icon" style="background: #e599f7;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="3"/><path d="M12 2V6M12 18V22M2 12H6M18 12H22"/></svg>
+            </div>
+            <span>SalesKit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="live-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">LỊCH HỌC TRỰC TIẾP</h2>
+          <a href="#" class="view-more">Xem thực ></a>
+        </div>
+        <div class="courses-grid" id="coursesGrid">
+          <!-- Courses will be rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="admin-section hidden" id="adminSection">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">QUẢN TRỊ KHÓA HỌC</h2>
+          <button class="add-course-btn" onclick="openAddCourseModal()">+ Thêm khóa học</button>
+        </div>
+        <div class="admin-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Hình</th>
+                <th>Tên khóa học</th>
+                <th>Thời gian</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody id="adminTableBody">
+              <!-- Admin rows rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="courseModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Thêm khóa học</h3>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <form id="courseForm" onsubmit="saveCourse(event)">
+        <input type="hidden" id="courseId">
+        <div class="form-group">
+          <label>Tên khóa học</label>
+          <input type="text" id="courseTitle" required>
+        </div>
+        <div class="form-group">
+          <label>Hình ảnh URL</label>
+          <input type="text" id="courseImage" placeholder="https://..." required>
+        </div>
+        <div class="form-group">
+          <label>Ngày</label>
+          <input type="text" id="courseDate" placeholder="26/08 - 27/08" required>
+        </div>
+        <div class="form-group">
+          <label>Thời gian</label>
+          <input type="text" id="courseTime" placeholder="19:30 - 22:30" required>
+        </div>
+        <div class="form-group">
+          <label>Mô tả</label>
+          <textarea id="courseDesc" rows="3"></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" onclick="closeModal()">Hủy</button>
+          <button type="submit" class="submit-btn">Lưu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="authModal">
+    <div class="modal-content auth-content">
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="switchAuthTab('login')">Đăng nhập</button>
+        <button class="auth-tab" onclick="switchAuthTab('register')">Đăng ký</button>
+      </div>
+      <div class="auth-forms">
+        <form id="loginForm" onsubmit="login(event)">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="loginEmail" placeholder="email@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Mật khẩu</label>
+            <input type="password" id="loginPassword" placeholder="Nhập mật khẩu" required>
+          </div>
+          <div class="modal-actions">
+            <button type="button" onclick="closeAuthModal()">Hủy</button>
+            <button type="submit" class="submit-btn">Đăng nhập</button>
+          </div>
+        </form>
+        <form id="registerForm" onsubmit="register(event)" class="hidden">
+          <div class="form-group">
+            <label>Tên</label>
+            <input type="text" id="regName" placeholder="Họ và tên" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="regEmail" placeholder="email@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Mật khẩu</label>
+            <input type="password" id="regPassword" placeholder="Tối thiểu 6 ký tự" required minlength="6">
+          </div>
+          <div class="form-group">
+            <label>Xác nhận mật khẩu</label>
+            <input type="password" id="regConfirmPassword" placeholder="Nhập lại mật khẩu" required>
+          </div>
+          <div class="modal-actions">
+            <button type="button" onclick="closeAuthModal()">Hủy</button>
+            <button type="submit" class="submit-btn">Đăng ký</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="admin-toggle" onclick="toggleAdmin()" title="Quản trị">⚙</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
