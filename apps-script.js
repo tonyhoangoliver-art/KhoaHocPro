@@ -143,13 +143,12 @@ function login(body) {
   const role = email === 'tonyhoang.oliver@gmail.com' ? 'admin' : (user[4] || 'user');
 
   const { token, expires } = getToken(email);
-  // Save token to sheet for validation (users sheet col 7+)
   const tokenCol = 7;
-  const lastCol = sheet.getLastColumn();
-  if (lastCol < tokenCol) {
-    sheet.getRange(1, tokenCol, 1, tokenCol - lastCol).setValues([Array(tokenCol - lastCol).fill('')]);
-  }
   const userSheet = getSheet(SHEET_USERS);
+  const lastCol = userSheet.getLastColumn();
+  if (lastCol < tokenCol) {
+    userSheet.getRange(1, tokenCol, 1, tokenCol - lastCol).setValues([Array(tokenCol - lastCol).fill('')]);
+  }
   userSheet.getRange(row, tokenCol).setValue(token);
 
   return jsonResponse({ token, user: { id: user[0], name: user[1], email: user[2], role, expires } });

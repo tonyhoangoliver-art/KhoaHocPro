@@ -1,5 +1,5 @@
 // ========== CONFIG ==========
-const API_URL = 'https://script.google.com/macros/s/AKfycbzvbBl8dbMIJBGp1P4Aw6FPbucmc-BFLXkdok6tFbdnZumEomTtyA-OlkS_1NW6LT6z/exec'; // TODO: Thay bằng URL Web App thực tế
+const API_URL = 'https://script.google.com/macros/s/AKfycbwMub1pCq6vIytoydq8gzf5j_4A6b0_UYaOJ7Mq7oxtnx3dPrHpezztW9bdzv4rdUms/exec'; // TODO: Thay bằng URL Web App thực tế
 const ADMIN_EMAIL = 'tonyhoang.oliver@gmail.com'; // TODO: Đổi email admin của bạn
 
 // ========== STATE ==========
